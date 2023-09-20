@@ -22,7 +22,15 @@
 - Клонируем репозиторий: **git clone [yatube_project](https://github.com/Olga-Zholudeva/yatube_project)**
 - Cоздаем и активировируем виртуальное окружение: **python3 -m venv env source env/bin/activate**
 - Устанавливаем зависимости из файла requirements.txt: **pip install -r requirements.txt**
-- Запускаем проект на локальном устройстве **python3 manage.py runserver**
+- Переходим в папку yatube: **cd yatube**
+- Применяем миграции: **python manage.py makemigrations**
+- Создаем супер пользователя: **python manage.py createsuperuser**
+- Применяем статику: **python manage.py collectstatic**
+- В папку с проектом, где файл settings.py добавляем файл .env куда прописываем наши параметры:
+  - SECRET_KEY='Ваш секретный ключ'
+  - ALLOWED_HOSTS='127.0.0.1, localhost'
+  - DEBUG=True
+- Запускаем проект на локальном устройстве: **python3 manage.py runserver**
 
 ### Проект выполнила:
 
